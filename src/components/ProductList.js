@@ -71,20 +71,20 @@ const ProductList = ({menu}) => {
         <CategoryTitle title="Espresso Based"/>
         <div className="flex gap-4 flex-wrap justify-center mb-8">
           {products.drinks?.espresso?.map((product, index) => (
-            <ProductItem menu={menu} product={product} setIsOpen={setIsOpen} setModalProduct={setModalProduct} key={`signature-${index}`}/>
+            <ProductItem menu={menu} product={product} setIsOpen={setIsOpen} setModalProduct={setModalProduct} key={`espresso-${index}`}/>
           ))}
         </div>
         <CategoryTitle title="Non-Coffe"/>
         <div className="flex gap-4 flex-wrap justify-center">
           {products.drinks?.nonCoffe?.map((product, index) => (
-            <ProductItem menu={menu} product={product} setIsOpen={setIsOpen} setModalProduct={setModalProduct} key={`signature-${index}`}/>
+            <ProductItem menu={menu} product={product} setIsOpen={setIsOpen} setModalProduct={setModalProduct} key={`nonCoffe-${index}`}/>
           ))}
         </div>
       </div>
       <div className={`${menu == 'Cemilan' ? '' : 'd-none'}`}>
         <div className="flex gap-4 flex-wrap justify-center">
         {products.foods?.map((product, index) => (
-          <ProductItem menu={menu} product={product} setIsOpen={setIsOpen} setModalProduct={setModalProduct} key={`signature-${index}`}/>
+          <ProductItem menu={menu} product={product} setIsOpen={setIsOpen} setModalProduct={setModalProduct} key={`foods-${index}`}/>
         ))}
         </div>
       </div>
