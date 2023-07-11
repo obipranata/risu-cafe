@@ -6,13 +6,13 @@ const Header = ({menu, setMenu}) => {
       <div className="menu mx-auto flex justify-between border w-52 rounded-lg bg-[#FCF2D9] mt-5">
         <button 
           className={`font-face-gm text-[11px] py-2 px-2 rounded-lg font-bold ${menu == 'Minuman' ? 'active' : '' }`}
-          onClick={() => {setMenu('Minuman')}}
+          onClick={() => setMenu('Minuman')}
         >
           Minuman
         </button>
         <button 
           className={`font-face-gm text-[11px] py-2 px-2 rounded-lg font-bold ${menu == 'Cemilan' ? 'active' : '' }`}
-          onClick={() => {setMenu('Cemilan')}}
+          onClick={() => setMenu('Cemilan')}
         >
           Cemilan
         </button>
