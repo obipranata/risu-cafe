@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/risu-react/static/css/main.df548ddd.css",
-    "main.js": "/risu-react/static/js/main.fd7f5969.js",
+    "main.js": "/risu-react/static/js/main.f8fbacb7.js",
     "static/js/787.354df2dc.chunk.js": "/risu-react/static/js/787.354df2dc.chunk.js",
     "static/media/publicPixel.ttf": "/risu-react/static/media/publicPixel.396062459b86d583d067.ttf",
     "static/media/logo.svg": "/risu-react/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/risu-react/index.html",
     "main.df548ddd.css.map": "/risu-react/static/css/main.df548ddd.css.map",
-    "main.fd7f5969.js.map": "/risu-react/static/js/main.fd7f5969.js.map",
+    "main.f8fbacb7.js.map": "/risu-react/static/js/main.f8fbacb7.js.map",
     "787.354df2dc.chunk.js.map": "/risu-react/static/js/787.354df2dc.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.df548ddd.css",
-    "static/js/main.fd7f5969.js"
+    "static/js/main.f8fbacb7.js"
   ]
 }
