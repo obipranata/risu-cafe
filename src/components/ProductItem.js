@@ -1,5 +1,5 @@
 const ProductItem = ({menu, product, setModalProduct, setIsOpen}) => {
-  const imgUrl = "https://obipranata.github.io/risu-cafe/assets/img/products/";
+  const imgUrl = "https://obipranata.github.io/risu/assets/img/products/";
   return(
   <div 
     className="product-card h-[211px] w-[155px] rounded-lg mt-4 relative border border-[#46E300] cursor-pointer product-item-border"

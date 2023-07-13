@@ -34,7 +34,7 @@ const ProductList = ({menu}) => {
   }
 
   useEffect(() => {
-    fetch("https://obipranata.github.io/risu-cafe/menu.json")
+    fetch("https://obipranata.github.io/risu/menu.json")
     .then((res) => {
       return res.json();
     })
@@ -60,34 +60,37 @@ const ProductList = ({menu}) => {
           <ModalProduct menu={menu} product={modalProduct} />
         </div>
       </Modal>
-
-      <div className={`${menu == 'Minuman' ? '' : 'd-none'}`}>
-        <CategoryTitle title="Signature"/>
-        <div className="flex gap-4 flex-wrap justify-center mb-8">
-          {products.drinks?.signature?.map((product, index) => (
-            <ProductItem menu={menu} product={product} setIsOpen={setIsOpen} setModalProduct={setModalProduct} key={`signature-${index}`}/>
+      {
+        menu == 'Cemilan' ? 
+        <div>
+          <div className="flex gap-4 flex-wrap justify-center">
+          {products.foods?.map((product, index) => (
+            <ProductItem menu={menu} product={product} setIsOpen={setIsOpen} setModalProduct={setModalProduct} key={`foods-${index}`}/>
           ))}
+          </div>
         </div>
-        <CategoryTitle title="Espresso Based"/>
-        <div className="flex gap-4 flex-wrap justify-center mb-8">
-          {products.drinks?.espresso?.map((product, index) => (
-            <ProductItem menu={menu} product={product} setIsOpen={setIsOpen} setModalProduct={setModalProduct} key={`espresso-${index}`}/>
-          ))}
+        :
+        <div>
+          <CategoryTitle title="Signature"/>
+          <div className="flex gap-4 flex-wrap justify-center mb-8">
+            {products.drinks?.signature?.map((product, index) => (
+              <ProductItem menu={menu} product={product} setIsOpen={setIsOpen} setModalProduct={setModalProduct} key={`signature-${index}`}/>
+            ))}
+          </div>
+          <CategoryTitle title="Espresso Based"/>
+          <div className="flex gap-4 flex-wrap justify-center mb-8">
+            {products.drinks?.espresso?.map((product, index) => (
+              <ProductItem menu={menu} product={product} setIsOpen={setIsOpen} setModalProduct={setModalProduct} key={`espresso-${index}`}/>
+            ))}
+          </div>
+          <CategoryTitle title="Non-Coffe"/>
+          <div className="flex gap-4 flex-wrap justify-center">
+            {products.drinks?.nonCoffe?.map((product, index) => (
+              <ProductItem menu={menu} product={product} setIsOpen={setIsOpen} setModalProduct={setModalProduct} key={`nonCoffe-${index}`}/>
+            ))}
+          </div>
         </div>
-        <CategoryTitle title="Non-Coffe"/>
-        <div className="flex gap-4 flex-wrap justify-center">
-          {products.drinks?.nonCoffe?.map((product, index) => (
-            <ProductItem menu={menu} product={product} setIsOpen={setIsOpen} setModalProduct={setModalProduct} key={`nonCoffe-${index}`}/>
-          ))}
-        </div>
-      </div>
-      <div className={`${menu == 'Cemilan' ? '' : 'd-none'}`}>
-        <div className="flex gap-4 flex-wrap justify-center">
-        {products.foods?.map((product, index) => (
-          <ProductItem menu={menu} product={product} setIsOpen={setIsOpen} setModalProduct={setModalProduct} key={`foods-${index}`}/>
-        ))}
-        </div>
-      </div>
+      }
     </div>
   );
 }

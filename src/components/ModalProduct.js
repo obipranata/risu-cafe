@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 const ModalProduct = ({product, menu}) => {
-  const imgUrl = "https://obipranata.github.io/risu-cafe/assets/img/products/";
+  const imgUrl = "https://obipranata.github.io/risu/assets/img/products/";
   const [varian, setVarian] = useState([]);
 
   useEffect(() => {
